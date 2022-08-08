@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {Navbar, Color  , Typography1 , Spaces , Button_nav , Inputsnav , Grid_nav} from './components';
+import {Route , Routes} from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='navbar'>
+        <Navbar/>
+      </div>
+      <div className='main'>
+        <Routes>
+          <Route path='/Color' element={<Color/>}/>
+          <Route path='/Typography1' element={<Typography1/>}/>
+          <Route path='/Spaces' element={<Spaces/>}/>
+          <Route path='/Button_nav' element={<Button_nav/>}/>
+          <Route path='/Inputsnav' element={<Inputsnav/>}/>
+          <Route path='/Grid_nav' element={<Grid_nav/>}/>
+        </Routes>
+      </div>
     </div>
   );
 }
